@@ -11,9 +11,17 @@ build-type:     Custom
 --     , base
 --     , evil-directory
 
+flag break-the-build
+  -- I wonder what will happen if you make this true?
+  default: False
+  manual: True
+  description: Totally won't break your build with a revision
+
 executable trojan
   main-is: Main.hs
   hs-source-dirs: src
   other-modules: HasGit
   build-depends: base
+  if flag(break-the-build)
+    build-depends: this-package-totally-does-not-exist < 0
   default-language: Haskell2010
