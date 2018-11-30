@@ -1,0 +1,19 @@
+cabal-version: 1.24
+name:           trojan
+version:        0.0.0
+build-type:     Custom
+
+-- I wonder what happens when we uncomment this block...
+--
+-- custom-setup
+--   setup-depends:
+--       Cabal
+--     , base
+--     , evil-directory
+
+executable trojan
+  main-is: Main.hs
+  hs-source-dirs: src
+  other-modules: HasGit
+  build-depends: base
+  default-language: Haskell2010

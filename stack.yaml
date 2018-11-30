@@ -1,0 +1,7 @@
+resolver: ghc-8.4.4
+
+packages:
+- ./trojan
+
+extra-deps:
+- ./evil-directory
